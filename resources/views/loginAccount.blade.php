@@ -59,18 +59,19 @@
       <hr class="line-secondary mt-0 mb-4" style="border-top:2px solid #6c757d;">
     </div>
     <div class="col-6">
-      <form action="/db-form" method="POST" enctype="multipart/form-data">
+      <form action="/db-auth" method="POST" enctype="multipart/form-data">
+        @csrf
         <div class="mb-3">
           <label for="exampleInputphone1" class="form-label">Phone</label>
-          <input name='phone' type="text" class="form-control" id="exampleInputphone1">
+          <input name='Phone' type="text" class="form-control" id="exampleInputphone1">
         </div>
         <div class="mb-3">
           <label for="exampleInputalamat1" class="form-label">Email</label>
-          <input name='alamat' type="text" class="form-control" id="exampleInputalamat1">
+          <input name='Email' type="text" class="form-control" id="exampleInputalamat1">
         </div>
         <div class="mb-3">
           <label for="exampleInputnominal1" class="form-label">Password</label>
-          <input name='nominal' type="number" class="form-control" id="exampleInputnominal1" step="0.01" min="2.50" max="99.99">
+          <input name='Password' type="password" class="form-control" id="exampleInputnominal1" step="0.01" min="2.50" max="99.99">
         </div>
         <button type="submit" class="btn btn-secondary">Login</button>
       </form>

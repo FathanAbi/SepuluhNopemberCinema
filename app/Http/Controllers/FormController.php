@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class FormController extends Controller
 {
@@ -38,7 +39,7 @@ class FormController extends Controller
             "Name" => $request->Name,
             "Phone" => $request->Phone,
             "Email" => $request->Email,
-            "Password" => $request->Password,
+            "Password" => Hash::make($request->Password),
             "Confirm" => $request->Confirm,
             "Gambar" => $filename,
         ]);

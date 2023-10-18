@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\FormController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,5 +32,6 @@ Route::get('/detail', function(){
 });
 
 Route::post('/db-form', [FormController::class, 'store']);
+Route::post('/db-auth', [LoginController::class, 'authenticate']);
 
 Route::get('/allForm', [FormController::class, 'index']);
