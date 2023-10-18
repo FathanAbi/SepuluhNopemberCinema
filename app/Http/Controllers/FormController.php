@@ -18,11 +18,11 @@ class FormController extends Controller
     {
         
         $request->validate([
-            'Name' => 'required',
-            'Phone' => 'required',
-            'Email' => 'required',
-            'Password' => 'required',
-            'Confirm' => 'required',
+            'name' => 'required',
+            'phone' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+            'confirm' => 'required',
             'gambar' => 'required|max:20480|mimes:jpg,png,jpeg'
         ]);
 
@@ -33,15 +33,15 @@ class FormController extends Controller
         $filename = date('Y-m-d-H-i-s') . "." . $extension;
 
         $request->file('gambar')->storeAs('public/images', $filename);
-
+        
         $request['gambar'] = $filename;
         User::create([
-            "Name" => $request->Name,
-            "Phone" => $request->Phone,
-            "Email" => $request->Email,
-            "Password" => $request->Password,
-            "Confirm" => $request->Confirm,
-            "Gambar" => $filename,
+            "name" => $request->name,
+            "phone" => $request->phone,
+            "email" => $request->email,
+            "password" => Hash::make($request->password),
+            "confirm" => $request->confirm,
+            "gambar" => $filename,
         ]);
 
         

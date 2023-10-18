@@ -39,9 +39,7 @@ return [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
-            'password' => [
-                'column' => 'Password', // Use 'Password' here
-            ],
+            
         ],
     ],
 

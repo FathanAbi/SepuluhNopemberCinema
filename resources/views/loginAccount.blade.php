@@ -67,15 +67,15 @@
         @csrf
         <div class="mb-3">
           <label for="exampleInputphone1" class="form-label">Phone</label>
-          <input name='Phone' type="text" class="form-control" id="exampleInputphone1">
+          <input name='phone' type="text" class="form-control" id="exampleInputphone1">
         </div>
         <div class="mb-3">
           <label for="exampleInputalamat1" class="form-label">Email</label>
-          <input name='Email' type="text" class="form-control" id="exampleInputalamat1">
+          <input name='email' type="text" class="form-control" id="exampleInputalamat1">
         </div>
         <div class="mb-3">
           <label for="exampleInputnominal1" class="form-label">Password</label>
-          <input name='Password' type="password" class="form-control" id="exampleInputnominal1">
+          <input name='password' type="password" class="form-control" id="exampleInputnominal1">
         </div>
         <button type="submit" class="btn btn-secondary">Login</button>
       </form>

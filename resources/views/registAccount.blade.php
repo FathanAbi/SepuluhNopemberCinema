@@ -63,24 +63,24 @@
           <div class="mb-3">
             @csrf
             <label for="exampleInputname1" class="form-label">Name</label>
-            <input name="Name" type="text" class="form-control" id="exampleInputname1" aria-describedby="nameHelp">
+            <input name="name" type="text" class="form-control" id="exampleInputname1" aria-describedby="nameHelp">
           </div>
           <div class="mb-3">
             <label for="exampleInputphone1" class="form-label">Phone</label>
-            <input name='Phone' type="text" class="form-control" id="exampleInputphone1">
+            <input name='phone' type="text" class="form-control" id="exampleInputphone1">
           </div>
           <div class="mb-3">
             <label for="exampleInputalamat1" class="form-label">Email</label> <!-- sebelumnya "alamat" -->
-            <input name='Email' type="text" class="form-control" id="exampleInputalamat1">
+            <input name='email' type="text" class="form-control" id="exampleInputalamat1">
           </div>
           <div class="mb-3">
             <label for="exampleInputnominal1" class="form-label">Password</label> <!-- sebelumnya "Nominal Uang" -->
-            <input name='Password' type="password" class="form-control" id="exampleInputnominal1" step="0.01" min="2.50" max="99.99">
+            <input name='password' type="password" class="form-control" id="exampleInputnominal1" step="0.01" min="2.50" max="99.99">
           </div>
           <div class="mb-3">
             <label for="exampleInputtenor1" class="form-label">Confirm Password</label> <!-- sebelumnya "tenor" -->
             <div class="input-group">
-            <input name='Confirm' type="password" class="form-control" id="exampleInputnominal1" step="1.00" min="1" max="24">
+            <input name='confirm' type="password" class="form-control" id="exampleInputnominal1" step="1.00" min="1" max="24">
             </div>
             <span class="form-text text-muted">Password harus sama </span>
           </div>

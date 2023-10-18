@@ -13,8 +13,8 @@ class LoginController extends Controller
     public function authenticate(Request $request) : RedirectResponse
     {
         $credentials = $request->validate([
-            'Email' => 'required',
-            'Password' => 'required',
+            'email' => 'required',
+            'password' => 'required',
         ]);
 
         if (Auth::attempt($credentials)) {
