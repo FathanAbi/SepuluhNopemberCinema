@@ -13,27 +13,16 @@ class LoginController extends Controller
     public function authenticate(Request $request) : RedirectResponse
     {
         $credentials = $request->validate([
-            'Phone' => ['required'],
-            'Password' => ['required'],
+            'Email' => 'required',
+            'Password' => 'required',
         ]);
 
-    $phone = $credentials['Phone'];
-    $password = $credentials['Password'];
-
-    //    dd($phone);
-    //    dd($password);
-
-        if (Auth::attempt(['Phone' => $phone, 'Password' => $password])) {
-            return redirect('/allForm');
+        if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
- 
             return redirect('/allForm');
         }
 
-        return redirect('/register');
-
-        return back()->withErrors([
-            'Phone' => 'The provided credentials do not match our records.',
-        ])->onlyInput('Phone');
+        return redirect('/login')
+            ->withErrors(['error' => 'The provided credentials do not match our records.']);
     }
 }

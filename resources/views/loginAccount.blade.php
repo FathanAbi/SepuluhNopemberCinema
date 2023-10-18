@@ -51,7 +51,11 @@
             <a class="nav-link text-light" href="#">Account</a>
         </div>
     </nav>
-
+    @if ($errors->has('error'))
+    <div class="alert alert-danger">
+        {{ $errors->first('error') }}
+    </div>
+@endif
 <div class="container" style="background-color: #FFFFFF;">
   <div class="row justify-content-center align-items-center" style="height:100%;">
     <div class="col-12">
@@ -71,7 +75,7 @@
         </div>
         <div class="mb-3">
           <label for="exampleInputnominal1" class="form-label">Password</label>
-          <input name='Password' type="password" class="form-control" id="exampleInputnominal1" step="0.01" min="2.50" max="99.99">
+          <input name='Password' type="password" class="form-control" id="exampleInputnominal1">
         </div>
         <button type="submit" class="btn btn-secondary">Login</button>
       </form>

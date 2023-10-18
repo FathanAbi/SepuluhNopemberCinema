@@ -39,7 +39,7 @@ class FormController extends Controller
             "Name" => $request->Name,
             "Phone" => $request->Phone,
             "Email" => $request->Email,
-            "Password" => Hash::make($request->Password),
+            "Password" => $request->Password,
             "Confirm" => $request->Confirm,
             "Gambar" => $filename,
         ]);
